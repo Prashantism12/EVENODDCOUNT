@@ -1,4 +1,4 @@
-import sy
+import sys
 numbers[13,14,5,8,9,16,30]
 even_count+= 0
 odd_count+= 0
