@@ -1,6 +1,13 @@
 import sys
 
-numbers = [13, 14, 5, 8, 9, 16, 30]
+# If user provides a list of numbers as command-line arguments
+if len(sys.argv) > 1:
+    print("user provided input values:")
+    # Convert command-line arguments (strings) to integers
+    numbers = list(map(int, sys.argv[1:]))
+else:
+    print("no input given - using default list:")
+    numbers = [10, 21, 4, 45, 66, 93, 1]
 
 even_count = 0
 odd_count = 0
@@ -11,5 +18,6 @@ for num in numbers:
     else:
         odd_count += 1
 
-sys.stdout.write(f"Count of even numbers: {even_count}\n")
-sys.stdout.write(f"Count of odd numbers: {odd_count}\n")
+print("Numbers list:", numbers)
+print("Count of even numbers:", even_count)
+print("Count of odd numbers:", odd_count)
